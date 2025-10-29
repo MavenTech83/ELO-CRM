@@ -79,5 +79,5 @@ public class Cliente {
 	public void setOportunidade(List<Oportunidade> oportunidade) {
 		this.oportunidade = oportunidade;
 	}
-    
 }
+    
