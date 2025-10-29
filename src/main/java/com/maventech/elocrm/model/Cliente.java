@@ -36,7 +36,7 @@ public class Cliente {
     // RELACIONAMENTO: 1 Cliente -> N Oportunidades
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties(value = "cliente", allowSetters = true)
-	private List<Oportunidades> oportunidade;
+	private List<Oportunidade> oportunidade;
 
     // Getters e Setters
     public Long getId() {
@@ -73,10 +73,10 @@ public class Cliente {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-	public List<Oportunidades> getOportunidade() {
+	public List<Oportunidade> getOportunidade() {
 		return oportunidade;
 	}
-	public void setOportunidade(List<Oportunidades> oportunidade) {
+	public void setOportunidade(List<Oportunidade> oportunidade) {
 		this.oportunidade = oportunidade;
 	}
     
