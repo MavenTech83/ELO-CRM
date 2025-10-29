@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -26,7 +27,8 @@ public class Usuario {
  
 	@NotBlank(message = "Por favor, informe o Nome para cadastro: ")
 	private String nome;
- 
+	
+	@Schema(example = "email@email.com.br")
 	@NotBlank(message = "Por favor, informe o Usuário para cadastro: ")
 	@Email(message = "Parece que o e-mail informado não é válido. Verifique as informações digitadas e tente novamente.")
 	private String usuario;
