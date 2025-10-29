@@ -3,7 +3,7 @@ package com.maventech.elocrm.model;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.generation.elocrm.model.Oportunidade;
+
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
