@@ -98,10 +98,11 @@ A API RESTful do **ELO CRM** fornece endpoints seguros e padronizados para opera
 | `DELETE` | `/oportunidades/{id}`                     | Excluir oportunidade             |
 
 ---
-## 🤝 7. Contribuidores
+## 🤝 7. Contribuidoras
 
 <div align="center"> 💙 Feito pela <b>Equipe MavenTech</b> 👩‍💻🚀 </div> 
 📚 Projeto desenvolvido para o Desafio Projeto Integrador – Back-End (Generation Brasil / 2025)
+
 
 
 
