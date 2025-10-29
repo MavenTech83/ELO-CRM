@@ -40,7 +40,7 @@ public class Usuario {
  
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties(value = "usuario", allowSetters = true)
-	private List<Oportunidades> oportunidade;
+	private List<Oportunidade> oportunidade;
  
 	public Long getId() {
 		return this.id;
@@ -82,11 +82,11 @@ public class Usuario {
 		this.foto = foto;
 	}
  
-	public List<Oportunidades> getOportunidade() {
+	public List<Oportunidade> getOportunidade() {
 		return this.oportunidade;
 	}
  
-	public void setOportunidade(List<Oportunidades> oportunidade) {
+	public void setOportunidade(List<Oportunidade> oportunidade) {
 		this.oportunidade = oportunidade;
 	}
  
