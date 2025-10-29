@@ -42,11 +42,8 @@ A API RESTful do **ELO CRM** fornece endpoints seguros e padronizados para opera
 6. **Documentação automática com Swagger (OpenAPI 3.0)**  
 ---
 
-## 🧱 3. Diagrama de Classes  
+## 🧱 3. Organização das Classes  
 
-<div align="center">
-   <img src="https://i.imgur.com/YCDUSNg.png" title="Diagrama de Classes CRM Seguros" width="70%"/>  
-</div>
 
 | 🧩 Classe | 💻 Tipo | 🧾 Atributos principais | 🧱 Descrição | 🎯 Requisitos atendidos |
 |-----------|---------|-------------------------|--------------|--------------------------|
@@ -60,7 +57,7 @@ A API RESTful do **ELO CRM** fornece endpoints seguros e padronizados para opera
 ## 🗃️ 4. Diagrama Entidade-Relacionamento (DER)  
 
 <div align="center">
-   <img src="https://i.imgur.com/woeWJtt.png" title="DER CRM Seguros" width="70%"/>  
+   <img src="https://ik.imagekit.io/Thalima23/image.png?updatedAt=1761775468699" width="70%"/>  
 </div>
 
 **Relacionamentos:**
@@ -105,3 +102,4 @@ A API RESTful do **ELO CRM** fornece endpoints seguros e padronizados para opera
 
 <div align="center"> Feito com 💙 por <b>Equipe MavenTech</b> 👩‍💻🚀 </div> 
 📚 Projeto desenvolvido para o Desafio Integrador – Back-End (Generation Brasil / 2025)
+
