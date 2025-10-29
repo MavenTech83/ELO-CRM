@@ -1,5 +1,10 @@
 package com.maventech.elocrm.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.generation.elocrm.model.Oportunidade;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -27,6 +32,11 @@ public class Cliente {
 
     @NotBlank(message = "O endereço é obrigatório!")
     private String endereco;
+    
+    // RELACIONAMENTO: 1 Cliente -> N Oportunidades
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties(value = "cliente", allowSetters = true)
+	private List<Oportunidades> oportunidade;
 
     // Getters e Setters
     public Long getId() {
@@ -63,4 +73,11 @@ public class Cliente {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+	public List<Oportunidades> getOportunidade() {
+		return oportunidade;
+	}
+	public void setOportunidade(List<Oportunidades> oportunidade) {
+		this.oportunidade = oportunidade;
+	}
+    
 }
