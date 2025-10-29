@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.maventech.elocrm.model.Oportunidade;
 import com.maventech.elocrm.repository.OportunidadeRepository;
-
 import jakarta.validation.Valid;
 
 	@RestController
@@ -70,6 +69,16 @@ import jakarta.validation.Valid;
 		                        oportunidade.getValorPotencial().setScale(2, java.math.RoundingMode.HALF_UP)
 		                    );
 		                    return ResponseEntity.ok(oportunidadeRepository.save(oportunidade));
+		                })
+		                .orElse(ResponseEntity.notFound().build());
+		    }
+		    
+		    @PutMapping("/{id}/status")
+		    public ResponseEntity<Oportunidade> atualizarStatus(@PathVariable Long id, @RequestBody Oportunidade oportunidade) { // Serve para atualizar apenas o status de uma oportunidade
+		        return oportunidadeRepository.findById(id)
+		                .map(registro -> {
+		                    registro.setStatus(oportunidade.getStatus()); // Atualiza o status da oportunidade existente
+		                    return ResponseEntity.ok(oportunidadeRepository.save(registro)); // Salva a oportunidade atualizada no banco de dados
 		                })
 		                .orElse(ResponseEntity.notFound().build());
 		    }

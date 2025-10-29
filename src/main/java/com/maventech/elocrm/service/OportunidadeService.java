@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.maventech.elocrm.model.Oportunidade;
+import com.maventech.elocrm.model.enums.StatusOportunidade;
 import com.maventech.elocrm.repository.OportunidadeRepository;
 
 @Service
@@ -15,17 +16,18 @@ public class OportunidadeService {
     @Autowired
     private OportunidadeRepository oportunidadeRepository;
 
-    // Regra de negócio: atualiza o status e permite ajuste de valor se necessário
-    public Optional<Oportunidade> atualizarStatus(Long id, Boolean novoStatus) {
+    // Atualiza o status e aplica regra de negócio opcional
+    public Optional<Oportunidade> atualizarStatus(Long id, StatusOportunidade novoStatus) {
         Optional<Oportunidade> oportunidadeExistente = oportunidadeRepository.findById(id);
 
         if (oportunidadeExistente.isPresent()) {
             Oportunidade oportunidade = oportunidadeExistente.get();
             oportunidade.setStatus(novoStatus);
 
-            // Exemplo de regra: se a oportunidade for fechada, garantir arredondamento
-            if (Boolean.TRUE.equals(novoStatus) && oportunidade.getValorPotencial() != null) {
-                BigDecimal valorCorrigido = oportunidade.getValorPotencial().setScale(2, java.math.RoundingMode.HALF_UP);
+            // Exemplo de regra: se a oportunidade for FECHADA, arredondar o valor potencial
+            if (novoStatus == StatusOportunidade.FECHADA && oportunidade.getValorPotencial() != null) {
+                BigDecimal valorCorrigido = oportunidade.getValorPotencial()
+                        .setScale(2, java.math.RoundingMode.HALF_UP);
                 oportunidade.setValorPotencial(valorCorrigido);
             }
 
@@ -34,6 +36,5 @@ public class OportunidadeService {
         }
 
         return Optional.empty();
-    
     }
 }
