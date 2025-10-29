@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,12 +19,11 @@ import com.maventech.elocrm.model.Usuario;
 import com.maventech.elocrm.model.UsuarioLogin;
 import com.maventech.elocrm.service.UsuarioService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.validation.Valid;
 
 @RestController
-	@RequestMapping("/usuarios")
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping("/usuarios")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 	public class UsuarioController {
 		
 		@Autowired
@@ -36,25 +36,26 @@ import jakarta.validation.Valid;
 
 		
 		@GetMapping("/{id}")
-		public ResponseEntity<Usuario> getById(@PathVariable Long id){
+		public ResponseEntity<Usuario> getById(@PathVariable Long id) {
 			return usuarioService.getById(id)
 					.map(resposta -> ResponseEntity.ok(resposta))
-					.orElse(ResponseEntity.notFound().build());
+					.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 		}
 		
 		@PostMapping("/cadastrar")
-		public ResponseEntity<Usuario> port(@Valid @RequestBody Usuario usuario){
+		public ResponseEntity<Usuario> post(@Valid @RequestBody Usuario usuario){
 			return usuarioService.cadastrarUsuario(usuario)
 					.map(resposta -> ResponseEntity.status(HttpStatus.CREATED).body(resposta))
 					.orElse(ResponseEntity.badRequest().build());
 		}
 		
 		@PutMapping("/atualizar")
-		public ResponseEntity<Usuario> put(@Valid @RequestBody Usuario usuario){
+		public ResponseEntity<Usuario> put(@Valid @RequestBody Usuario usuario) {
 			return usuarioService.atualizarUsuario(usuario)
 					.map(resposta -> ResponseEntity.status(HttpStatus.OK).body(resposta))
-					.orElse(ResponseEntity.notFound().build());
+					.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 		}
+
 		
 		@PostMapping("/logar")
 		public ResponseEntity<UsuarioLogin> autenticar(@Valid @RequestBody Optional<UsuarioLogin> usuarioLogin) {
