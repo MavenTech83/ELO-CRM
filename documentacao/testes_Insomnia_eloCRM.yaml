@@ -1,0 +1,597 @@
+type: collection.insomnia.rest/5.0
+name: EloCRM
+meta:
+  id: wrk_5dc5ca0af76e4ef9970e82d828e7f549
+  created: 1761755166183
+  modified: 1761755166183
+  description: ""
+collection:
+  - name: Render
+    meta:
+      id: fld_c5defebe63d74c1c85d505c7d4384e4e
+      created: 1761786796032
+      modified: 1761786796032
+      sortKey: -1761786796032
+      description: ""
+    children:
+      - name: Oportunidade
+        meta:
+          id: fld_ae9a95e4aa2c4dbe945a16f7d9483aff
+          created: 1760443575315
+          modified: 1761787695049
+          sortKey: -1761786876246
+          description: ""
+        children:
+          - url: https://elo-crm.onrender.com/oportunidades
+            name: Listar todas
+            meta:
+              id: req_69027897cc2f40a0aa6419a7c5b45399
+              created: 1760443081507
+              modified: 1761788520042
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583887
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiaWx1QGJpbHUuY29tLmJyIiwiaWF0IjoxNzYxNTg4MzExLCJleHAiOjE3NjE1ODkyMTF9.iI0lqBjPQ80Lo4s48mMFiLwuX1-unOfJr-6G8hngMV5cOWgf-OcXr6ZMn-829hax
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/oportunidades/2
+            name: Procurar por ID
+            meta:
+              id: req_12278458aed3491bb1f719ba47bea5e2
+              created: 1760445302390
+              modified: 1761788537344
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583812
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/oportunidades/descricao/seguro
+            name: Procurar por descrição
+            meta:
+              id: req_73aaf7a93f3245a496cc1715ab5def9a
+              created: 1760448735633
+              modified: 1761788680525
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583799.5
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/oportunidades
+            name: Criar
+            meta:
+              id: req_39324d33552d4c2aa83378c77a1e6826
+              created: 1760450053344
+              modified: 1762041081921
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583837
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "descricao": "string",
+                  "status": true,
+                  "valorPotencial": 0,
+                  "dataCriacao": "2025-11-01",
+                  "tipoOportunidade": "string"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiaWx1QGJpbHUuY29tLmJyIiwiaWF0IjoxNzYxNTg4MzExLCJleHAiOjE3NjE1ODkyMTF9.iI0lqBjPQ80Lo4s48mMFiLwuX1-unOfJr-6G8hngMV5cOWgf-OcXr6ZMn-829hax
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/oportunidades/
+            name: Atualizar
+            meta:
+              id: req_8c904d12159e446397b8efcff3c6dc2c
+              created: 1760451569349
+              modified: 1762041116016
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583787
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 0,
+                  "descricao": "string",
+                  "status": true,
+                  "valorPotencial": 0,
+                  "dataCriacao": "2025-11-01",
+                  "tipoOportunidade": "string"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/oportunidades/3
+            name: "Deletar "
+            meta:
+              id: req_1f6824a679444f0199e82ac587595c0d
+              created: 1760452441050
+              modified: 1762041160458
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583687
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Usuario
+        meta:
+          id: fld_aeb215090e3f4fd4a694dfa69f7a3434
+          created: 1761062129548
+          modified: 1761786876169
+          sortKey: -1761786876146
+          description: ""
+        children:
+          - url: https://elo-crm.onrender.com/usuarios/cadastrar
+            name: Cadastrar usuário
+            meta:
+              id: req_3352cd5bff544288934ef8edd4eff8ae
+              created: 1761062129551
+              modified: 1762040670335
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583587
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Root",
+                  "usuario": "root@root.com.br",
+                	"senha":"rootroot",
+                	"foto":"-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/usuarios/logar
+            name: Autenticar usuário
+            meta:
+              id: req_185f909e3c2d4b3fa9fd98608d40aec3
+              created: 1761062575166
+              modified: 1761761838098
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583537
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "usuario": "root@root.com.br",
+                	"senha":"rootroot"
+                }
+            parameters:
+              - name: ""
+                value: ""
+                disabled: false
+                id: pair_2e0dfb3da0d5420cba7266e2c2fd6b36
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: none
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/usuarios/all
+            name: Consultar todos os usuários
+            meta:
+              id: req_6421300a00e74dfbb3f1e6a350e322ae
+              created: 1761063147816
+              modified: 1761788338220
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583512
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            parameters:
+              - name: ""
+                value: ""
+                disabled: false
+                id: pair_2e0dfb3da0d5420cba7266e2c2fd6b36
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzYxNTc4MTY3LCJleHAiOjE3NjE1NzkwNjd9.H1y7x40T5F7Lbi4oZt6KKYUM1JIasy940Fiwqoy9tgjoV1M88-VpIk6hmvYE4iHR
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/usuarios/1
+            name: Consultar usuário por id
+            meta:
+              id: req_2d9a8eac4e274067b5770c3f189de309
+              created: 1761063516234
+              modified: 1761788346927
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583499.5
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            parameters:
+              - name: ""
+                value: ""
+                disabled: false
+                id: pair_3ab8b2da167a4c23ad9967c9f661baa4
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzYxNTc4MTY3LCJleHAiOjE3NjE1NzkwNjd9.H1y7x40T5F7Lbi4oZt6KKYUM1JIasy940Fiwqoy9tgjoV1M88-VpIk6hmvYE4iHR
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/usuarios/atualizar
+            name: Atualizar usuário
+            meta:
+              id: req_512f8e4d534a448b9edbafa1a1649e1f
+              created: 1761063895452
+              modified: 1762040718064
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583562
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id":2,
+                	"nome": "Ana Carolina",
+                  "usuario": "Ana@ana.com.br",
+                	"senha":"12345555",
+                	"foto":"-"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzYxNTc4MTY3LCJleHAiOjE3NjE1NzkwNjd9.H1y7x40T5F7Lbi4oZt6KKYUM1JIasy940Fiwqoy9tgjoV1M88-VpIk6hmvYE4iHR
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Cliente
+        meta:
+          id: fld_943c414711464a208b813314552b189e
+          created: 1761786882267
+          modified: 1761787673224
+          sortKey: -1761786876346
+          description: ""
+        children:
+          - url: https://elo-crm.onrender.com/clientes
+            name: Listar todas
+            meta:
+              id: req_f5959dcff5204e65aa1e3181bba0c8c1
+              created: 1761786882268
+              modified: 1762041243942
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583887
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzYyMDQwOTc4LCJleHAiOjE3NjIwNDQ1Nzh9.8wph1Q1zUMLUhkVZ2iJ5-uaeOj5lXen3-fZALVS1FiUMtkeoz3erCvgegFecwepy
+              prefix: Bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/clientes2
+            name: Procurar por ID
+            meta:
+              id: req_75436f731cb84fdcb1693042a9f2ec79
+              created: 1761786882269
+              modified: 1762041349127
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583812
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/clientes/nome/Carla
+            name: Procurar por nome
+            meta:
+              id: req_b978f9a9e2124fc0be6c82f54139d5aa
+              created: 1761786882269
+              modified: 1762041400536
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583799.5
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/clientes/
+            name: Atualizar
+            meta:
+              id: req_1d5711131439478e9c74c7f819b373a5
+              created: 1761786882270
+              modified: 1762041446791
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583787
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "id": 0,
+                  "nome": "string",
+                  "email": "string",
+                  "telefone": "stringst",
+                  "endereco": "string",
+                  "oportunidade": [
+                    {
+                      "id": 0,
+                      "descricao": "string",
+                      "status": true,
+                      "valorPotencial": 0,
+                      "dataCriacao": "2025-11-01",
+                      "tipoOportunidade": "string"
+                    }
+                  ]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/clientes
+            name: Criar
+            meta:
+              id: req_9091dab3da4b40e983c2cba932c5d1d1
+              created: 1761786882270
+              modified: 1762041320776
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583837
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "string",
+                  "email": "string",
+                  "telefone": "stringst",
+                  "endereco": "string",
+                  "oportunidade": [
+                    {
+                      "id": 0
+                		}
+                	]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://elo-crm.onrender.com/clientes/2
+            name: "Deletar "
+            meta:
+              id: req_9e40877c4a394770be3416da06847b4d
+              created: 1761786882271
+              modified: 1762041497581
+              isPrivate: false
+              description: ""
+              sortKey: -1760544583687
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_eeb5b9a4a7774d33ae49457123ef6cfa
+    created: 1760443081466
+    modified: 1761585084470
+  cookies:
+    - id: 4d1a113c-a25f-4413-b9f6-5f961b84730c
+      key: JSESSIONID
+      value: 817BAF6536551796D84B73CE17D5FE7D
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_1afc8e46333a42428baf20f654464972
+    created: 1760443081465
+    modified: 1760443081465
+    isPrivate: false
